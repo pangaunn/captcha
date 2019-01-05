@@ -4,15 +4,14 @@ import "fmt"
 
 func Captcha(pattern, op1, opr, op2 int) string {
 	oprs := []string{"+", "-", "*"}
+	ops := []string{"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"}
+	s2 := ops[op2-1]
 
-	var ops2 string
-	if op2 == 1 {
-		ops2 = "one"
-	} else if op2 == 2 {
-		ops2 = "two"
+	var s1 string
+	if op1 == 1 {
+		s1 = "1"
 	} else {
-		ops2 = "three"
+		s1 = "5"
 	}
-
-	return fmt.Sprintf("1 %s %s", oprs[opr-1], ops2)
+	return fmt.Sprintf("%s %s %s", s1, oprs[opr-1], s2)
 }

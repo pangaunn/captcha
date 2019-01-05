@@ -38,9 +38,17 @@ func TestCaptcha1MultiplyTwo(t *testing.T) {
 	}
 }
 
-func TestCaptcha1PlusTwo(t *testing.T) {
+func TestCaptcha1PlusThree(t *testing.T) {
 	expected := "1 + three"
 	result := captcha.Captcha(1, 1, 1, 3)
+	if expected != result {
+		t.Errorf("It should say %s but get %s", expected, result)
+	}
+}
+
+func TestCaptcha5PlusTwo(t *testing.T) {
+	expected := "5 + two"
+	result := captcha.Captcha(1, 5, 1, 2)
 	if expected != result {
 		t.Errorf("It should say %s but get %s", expected, result)
 	}
