@@ -1,10 +1,8 @@
 package captcha
 
-func Captcha(pattern, op1, operator, op2 int) string {
-	if operator == 2 {
-		return "1 - one"
-	} else if operator == 3 {
-		return "1 * one"
-	}
-	return "1 + one"
+import "fmt"
+
+func Captcha(pattern, op1, opr, op2 int) string {
+	oprs := []string{"+", "-", "*"}
+	return fmt.Sprintf("1 %s one", oprs[opr-1])
 }
