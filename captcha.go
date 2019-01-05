@@ -6,8 +6,8 @@ import (
 )
 
 func Captcha(pattern, op1, opr, op2 int) string {
-	ops := []string{"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"}
-	oprs := []string{"+", "-", "*"}
+	ops := [9]string{"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"}
+	oprs := [3]string{"+", "-", "*"}
 
 	var s1 string
 	if s1 = strconv.Itoa(op1); pattern == 2 {
