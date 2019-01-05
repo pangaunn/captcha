@@ -53,3 +53,11 @@ func TestCaptcha5PlusTwo(t *testing.T) {
 		t.Errorf("It should say %s but get %s", expected, result)
 	}
 }
+
+func TestCaptcha4MinusTwo(t *testing.T) {
+	expected := "4 - two"
+	result := captcha.Captcha(1, 4, 2, 2)
+	if expected != result {
+		t.Errorf("It should say %s but get %s", expected, result)
+	}
+}
